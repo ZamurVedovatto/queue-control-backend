@@ -63,8 +63,13 @@ mongoose.connect(MONGO_URI, {
     })
 
 // middlewares
-app.use(
-    cors({
+// app.use(
+//     cors({
+//         origin: [ALLOWED_ORIGIN],
+//         credentials: true,
+//     })
+// );
+app.use(cors({
         origin: [ALLOWED_ORIGIN],
         credentials: true,
     })
