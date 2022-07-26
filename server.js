@@ -51,12 +51,12 @@ mongoose.connect(MONGO_URI, {
     })
     .then(() => {
         // listen for requests
-        // app.listen(PORT, () => {
-        //     console.log(`connected to db & app running in port ${PORT}`)
-        // })
-        server.listen(PORT, () => {
+        app.listen(PORT, () => {
             console.log(`connected to db & app running in port ${PORT}`)
-        });
+        })
+        // server.listen(PORT, () => {
+        //     console.log(`connected to db & app running in port ${PORT}`)
+        // });
     })
     .catch((error) => {
         console.log(error)
